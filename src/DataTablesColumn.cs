@@ -7,7 +7,7 @@ namespace Soenneker.DataTables.Dtos.Column;
 /// <summary>
 /// A C# type mapping to DataTables.js Column
 /// </summary>
-public sealed class DataTablesColumn
+public sealed class DataTableColumn
 {
     /// <summary>
     /// Set the columns' aria-label attribute value.
