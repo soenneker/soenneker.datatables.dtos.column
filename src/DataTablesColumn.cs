@@ -116,4 +116,19 @@ public sealed class DataTableColumn
     /// </summary>
     [JsonPropertyName("width")]
     public string? Width { get; set; }
+
+    /// <summary>
+    /// Defines the priority for column visibility when using the DataTables Responsive extension.
+    /// Lower values have higher priority and are shown first on smaller screens. Columns with higher
+    /// values will be hidden first as screen space becomes limited.
+    /// </summary>
+    [JsonPropertyName("responsivePriority")]
+    public int? ResponsivePriority { get; set; }
+
+    /// <summary>
+    /// Specifies the display order of the column in the table.
+    /// Columns with lower values appear earlier. If null, default ordering is used.
+    /// </summary>
+    [JsonPropertyName("order")]
+    public int? Order { get; set; }
 }
