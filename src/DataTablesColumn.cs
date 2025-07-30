@@ -67,7 +67,7 @@ public sealed class DataTableColumn
     /// Enable or disable ordering on this column.
     /// </summary>
     [JsonPropertyName("orderable")]
-    public bool? Orderable { get; set; }
+    public bool Orderable { get; set; } = false;
 
     /// <summary>
     /// Define multiple column ordering as the default order for a column. Can be int or array.
@@ -91,7 +91,7 @@ public sealed class DataTableColumn
     /// Enable or disable search on the data in this column.
     /// </summary>
     [JsonPropertyName("searchable")]
-    public bool? Searchable { get; set; }
+    public bool Searchable { get; set; } = false;
 
     /// <summary>
     /// Set the column title.
@@ -109,7 +109,7 @@ public sealed class DataTableColumn
     /// Enable or disable the display of this column.
     /// </summary>
     [JsonPropertyName("visible")]
-    public bool? Visible { get; set; }
+    public bool Visible { get; set; } = true;
 
     /// <summary>
     /// Column width assignment.
@@ -123,12 +123,12 @@ public sealed class DataTableColumn
     /// values will be hidden first as screen space becomes limited.
     /// </summary>
     [JsonPropertyName("responsivePriority")]
-    public int? ResponsivePriority { get; set; }
+    public int ResponsivePriority { get; set; } = -1;
 
     /// <summary>
     /// Specifies the display order of the column in the table.
     /// Columns with lower values appear earlier. If null, default ordering is used.
     /// </summary>
     [JsonPropertyName("order")]
-    public int? Order { get; set; }
+    public int Order { get; set; } = -1;
 }
