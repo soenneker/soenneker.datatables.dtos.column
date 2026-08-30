@@ -34,9 +34,10 @@ public sealed class DataTableColumn
     public string? ContentPadding { get; set; }
 
     /// <summary>
-    /// Cell created callback to allow DOM manipulation.
+    /// An optional in-process callback associated with cell creation. Delegates cannot be represented in JSON,
+    /// so this value is ignored during serialization.
     /// </summary>
-    [JsonPropertyName("createdCell")]
+    [JsonIgnore]
     public Action<string, string, object>? CreatedCell { get; set; }
 
     /// <summary>
